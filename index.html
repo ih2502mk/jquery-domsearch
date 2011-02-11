@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>jquery.domsearch</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="screen.css" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>domsearch.js</h1>
+        <p>
+          A <a href="http://jquery.com">jQuery</a> plugin for searching the DOM
+          <a class="download" href="https://github.com/juliocesar/jquery-domsearch/raw/master/jquery.domsearch.js"><span class="arrow">↓</span> Download</a>
+        </p>
+      </header>
+      <h1>In a gist</h1>
+      <p>
+        It lets you search within an element (e.g.: a table or a list), narrowing down
+        the inner elements using <a href="https://github.com/rmm5t/liquidmetal/">LiquidMetal</a>,
+        which is way better than whatever else you could come up with.
+      </p>
+      <h1>API</h1>
+      <p>
+        Using a text field <code>#search</code> to search in a list <code>#fruits</code>:
+      </p>
+      <code>$('input#search').domsearch('ul#fruits');</code>
+      <p>
+        In the table below, using only the weight field (assuming <code>&lt;td class="weight"&gt;</code>):
+      </p>
+      <code>$('#search').domsearch('table#fruits', {criteria: 'td.weight'});</code>
+      <p>
+        Same as the previous example, using 2 fields as criteria:
+      </p>
+      <code>$('#search').domsearch('table#fruits', {criteria: ['td.price', 'td.weight']});</code>
+      <h1>Demo</h1>
+      <p>
+        Try it with typos, incomplete names, and generally confusing but similar words
+        to what you're actually searching for.
+      </p>
+      <form action="#">
+        <label for="search">Search</label>
+        <input type="text" name="search" value="" id="search" />
+      </form>
+      <table id="fruits">
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple</td>
+            <td class="weight">0.1kg</td>
+          </tr>
+          <tr>
+            <td>Orange</td>
+            <td class="weight">0.2kg</td>
+          </tr>
+          <tr>
+            <td>Watermelon</td>
+            <td class="weight">2kg</td>
+          </tr>
+          <tr>
+            <td>Peach</td>
+            <td class="weight">0.1kg</td>
+          </tr>
+          <tr>
+            <td>Pear</td>
+            <td class="weight">0.2kg</td>
+          </tr>
+          <tr>
+            <td>Passionfruit</td>
+            <td class="weight">0.05kg</td>
+          </tr>
+          <tr>
+            <td>Apricot</td>
+            <td class="weight">0.02kg</td>
+          </tr>
+          <tr>
+            <td>Lime</td>
+            <td class="weight">0.01kg</td>
+          </tr>
+          <tr>
+            <td>Imbu</td>
+            <td class="weight">0.02kg</td>
+          </tr>
+          <tr>
+            <td>Indonesian Guavas</td>
+            <td class="weight">0.3kg</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1>Credits</h1>
+      <p>
+        domsearch.js is made with <span class="heart">♥</span> by
+        <a href="http://twitter.com/julio_ody">@julio_ody</a>. The initial work
+        was done while I was working at <a href="http://incite.com.au">Incite</a>, so props
+        to them.
+      </p>
+    </section>
+    <script type="text/javascript" src="jquery-1.5.min.js"></script>
+    <script type="text/javascript" src="liquidmetal.js"></script>
+    <script type="text/javascript" src="jquery.domsearch.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#search').domsearch('#fruits tbody')
+      })
+    </script>
+  </body>
+</html>
