@@ -167,7 +167,7 @@ h1 { font-size: 2.2em }
 table { 
   width: 100%; 
   background: #CFCFCF; 
-  margin-top: 2em;
+  margin: 2em 0;
   -webkit-border-radius:  5px;
   -moz-border-radius:     5px;
   border-radius:          5px;
@@ -206,3 +206,4 @@ input {
   font-size: 1.2em;
   padding: 0.5em;
 }
+.heart { font-family: 'Arial' }
