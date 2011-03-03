@@ -128,7 +128,7 @@ $(function($) {
 		} else {
 			$.error( 'Method ' +  method + ' does not exist' );
 		}
-  };
+	};
 
 	$.domsearch = function(element, searchIn, options) {
 		$(element).domsearch(searchIn, options);
