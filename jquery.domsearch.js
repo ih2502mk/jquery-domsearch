@@ -85,15 +85,14 @@ $(function($) {
 						if (event.keyCode == 9) return true; // TAB
 						delayer.setup(
 							function() {
-			          if ($this.val() == '') {
-			            $this.data('originalOrder').show().appendTo(settings.target);
-			          } else {
+								if ($this.val() == '') {
+									$this.data('originalOrder').show().appendTo(settings.target);
+								} else {
 									search($this.val(), settings.target[0], settings);
-			          }
+								}
 								if (typeof settings.onkeydown == 'function') settings.onkeydown($this);
 							}
-
-							);
+						);
 						return true;
 					});
 
@@ -128,7 +127,7 @@ $(function($) {
 		} else {
 			$.error( 'Method ' +  method + ' does not exist' );
 		}
-  };
+	};
 
 	$.domsearch = function(element, searchIn, options) {
 		$(element).domsearch(searchIn, options);
